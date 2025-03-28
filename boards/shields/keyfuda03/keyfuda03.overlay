@@ -45,4 +45,4 @@
             , <&bmp 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
     };
-}
+};
