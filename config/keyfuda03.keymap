@@ -21,6 +21,7 @@
                 &kp E
                 &kp F
             >;
+            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
     };
 };

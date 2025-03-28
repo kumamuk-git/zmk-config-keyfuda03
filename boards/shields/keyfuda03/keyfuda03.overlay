@@ -12,7 +12,7 @@
         kscan = <&kscan0>;
 
         keys  //                    w   h    x    y     rot    rx    ry
-            =<&key_physical_attrs  50  50    0    0       0     0     0>
+            =<&key_physical_attrs 100 100    0    0       0     0     0>
             ,<&key_physical_attrs 100 100    0  100       0     0     0>
             ,<&key_physical_attrs 100 100    0  200       0     0     0>
             ,<&key_physical_attrs 100 100    0  300       0     0     0>
@@ -44,5 +44,17 @@
             , <&bmp 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             , <&bmp 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
             ;
+    };
+    encoder: encoder {
+        compatible = "alps,ec11";
+        a-gpios = <&bmp 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&bmp 17  (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <12>;
+        status = "okay";
+    };
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&encoder>;
+        triggers-per-rotation = <10>;
     };
 };
