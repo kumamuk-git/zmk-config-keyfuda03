@@ -1,0 +1,7 @@
+file_format: "1"
+id: keyfuda03
+naid: keyfuda03
+type: shield
+features:
+  - keys
+  - studio
