@@ -1,0 +1,6 @@
+if SHIELD_KEYFUDA03
+
+config ZMK_KEYBOARD_NAME
+    default "keyfuda03"
+
+endif
