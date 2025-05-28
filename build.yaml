@@ -20,5 +20,7 @@
 ---
 include:
   - board: ble_micro_pro
+    shield: settings_reset
+  - board: ble_micro_pro
     shield: keyfuda03
     snippet: studio-rpc-usb-uart
